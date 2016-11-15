@@ -1,0 +1,29 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+body {
+	font-family: $font-primary;
+	font-size: 1.2rem;
+	line-height: 160%;
+	background: $color-primary;
+	color: $color-secondary;
+	padding: 3%;
+}
+
+#{headings()} {
+	color: $seventeens3;
+	font-family: $font-secondary;
+	font-size: 2.4rem;
+	text-align: center;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
+a {
+	color: $seventeens3;
+
+	&:hover {
+		color: darken($seventeens3, 25);
+	}
+}
