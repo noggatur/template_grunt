@@ -68,6 +68,6 @@
 Итоговый проект будет лежать в папке `public`.
 
 ## Аналоги
-- Gulp.js
-- CodeKit
-- Prepros
+- [Gulp.js](http://gulpjs.com/)
+- [CodeKit](https://codekitapp.com/)
+- [Prepros](https://prepros.io/)
