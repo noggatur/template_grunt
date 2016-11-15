@@ -1,8 +1,7 @@
-require "susy"
+# require "susy"
 require "bourbon"
 require 'bootstrap-sass'
-css_dir = '_/css'
-sass_dir = '_/components/sass'
-javascripts_dir = '_/js'
+css_dir = 'public/css'
+sass_dir = 'frontend/scss'
 output_style = :expanded
 relative_assets = true
