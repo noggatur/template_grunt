@@ -1,5 +1,5 @@
 {
-  "name": "Grunt.js Front-end Workspace",
+  "name": "frontend_workspace",
   "version": "1.0.0",
   "description": "Шаблон веб-проекта на Grunt.",
   "repository": {
@@ -7,8 +7,8 @@
     "url": "https://github.com/noggatur/template.git"
   },
   "author": "iGor Polyakov",
-  "license": "The Unlicensed",
-  "devDependencies": {
+  "license": "UNLICENSED",
+  "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.13.0",

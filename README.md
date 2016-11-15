@@ -65,6 +65,8 @@
   NODE_ENV=production grunt
 ```
 
+Итоговый проект будет лежать в папке `public`.
+
 ## Аналоги
 - Gulp.js
 - CodeKit
