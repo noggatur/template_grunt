@@ -3,3 +3,4 @@ node_modules
 Gemfile.lock
 public/
 .sass-cache/
+npm-debug.log
