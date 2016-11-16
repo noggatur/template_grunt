@@ -14,3 +14,11 @@ body {
   margin: 10px 0;
   text-align: center;
 }
+
+.bourbon-test {
+  width: 200px;
+  height: 50px;
+  @include linear-gradient(to top, #8fdce5, #3dc3d1, $fallback: red);
+  margin: 10px 0;
+  text-align: center;
+}
