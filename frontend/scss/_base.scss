@@ -4,3 +4,13 @@ body {
 	background: $color-bg;
 	color: $color-primary;
 }
+
+.sass-test {
+  width: 100px;
+  height: 100px;
+  border: 2px solid darken(red, 1.5);
+  background: lignten(red, 0.5);
+  @include border-radius(10px);
+  margin: 10px 0;
+  text-align: center;
+}

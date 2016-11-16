@@ -33,32 +33,6 @@ module.exports = function(grunt) {
   // Также можно cжимать файлы JSON
 
 
-
-  // Создаём задачу, которая сжимает всё
-  grunt.registerTask('combine_all', [
-    'compass:compressed',
-    'coffee',
-    'watchify',
-    'uglify',
-    'imagemin',
-    'minifyHtml',
-    'copy',
-  ]);
-
-  // Режим разработки (по умолчанию)
-  var env = process.env.NODE_ENV || 'dev';
-  if (env === 'dev') {
-    grunt.registerTask('default', ['combine_all', 'watch']);
-  }
-
-  // Режим Production ($ NODE_ENV=production grunt)
-  if (env === 'production') {
-    grunt.registerTask('default', ['combine_all']);
-
-    // Для автоматической сборки на Heroku
-    grunt.registerTask('heroku:production', 'build');
-  }
-
   // Основная конфигурация Grunt
   grunt.initConfig({
     copy: {
@@ -69,6 +43,16 @@ module.exports = function(grunt) {
             cwd: 'frontend/fonts/',
             src: ['**'],
             dest: 'public/fonts/'
+          }
+        ]
+      },
+      html: {
+        files: [
+          {
+            expand: true,
+            cwd: 'frontend/',
+            src: ['*.html'],
+            dest: 'public/'
           }
         ]
       }
@@ -157,8 +141,36 @@ module.exports = function(grunt) {
         tasks: ['compass:expanded']
       },  // sass
       html: {
-        files: ['frontend/*.html']
+        files: ['frontend/*.html'],
+        tasks: ['copy:html']
       } // html
     } // watch
   }); // initConfig
+
+
+
+  // Создаём задачу, которая сжимает всё
+  grunt.registerTask('combine_all', [
+    'compass:compressed',
+    'coffee',
+    'watchify',
+    'uglify',
+    'imagemin',
+    'minifyHtml',
+    'copy:main'
+  ]);
+
+  // Режим разработки (по умолчанию)
+  var env = process.env.NODE_ENV || 'dev';
+  if (env === 'dev') {
+    grunt.registerTask('default', ['combine_all', 'watch']);
+  }
+
+  // Режим Production ($ NODE_ENV=production grunt)
+  if (env === 'production') {
+    grunt.registerTask('default', ['combine_all']);
+
+    // Для автоматической сборки на Heroku
+    grunt.registerTask('heroku:production', 'build');
+  }
 };  // exports
