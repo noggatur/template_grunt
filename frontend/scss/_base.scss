@@ -6,10 +6,10 @@ body {
 }
 
 .sass-test {
-  width: 100px;
-  height: 100px;
-  border: 2px solid darken(red, 1.5);
-  background: lignten(red, 0.5);
+  width: 150px;
+  height: 30px;
+  border: 2px solid darken(red, 10);
+  background: lighten(red, 10);
   @include border-radius(10px);
   margin: 10px 0;
   text-align: center;
@@ -17,7 +17,7 @@ body {
 
 .bourbon-test {
   width: 200px;
-  height: 50px;
+  height: 30px;
   @include linear-gradient(to top, #8fdce5, #3dc3d1, $fallback: red);
   margin: 10px 0;
   text-align: center;
