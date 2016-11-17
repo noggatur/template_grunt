@@ -117,19 +117,25 @@ module.exports = function(grunt) {
       compile: {
         options: {
           expand: true,
-          flatten: true,
-          bare: true
+          flatten: true
         },  // options
         files: {
           'frontend/js/precompiled/coffee.js': ['frontend/coffee/*.coffee']
         } // files
-      } // compile
-    },  // coffee
+      }, // compile
+      compile_modules: {
+        expand: true,
+        cwd: 'frontend/coffee/modules/',
+        src: ['*.coffee'],
+        dest: 'frontend/js/precompiled/modules_coffee/',
+        ext: '.js'
+      } // compile_modules
+    }, // coffee
 
     watch: {
       options: {livereload: true},
       coffee: {
-        files: ['frontend/coffee/*.coffee'],
+        files: ['frontend/coffee/**/*.coffee'],
         tasks: ['coffee']
       },  // coffee
       scripts: {
