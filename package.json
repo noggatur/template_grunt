@@ -12,7 +12,7 @@
     "angular": "^1.5.8",
     "bootstrap-sass": "^3.3.6",
     "grunt": "^0.4.5",
-    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-coffee": "^1.0.0",
     "grunt-contrib-compass": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
