@@ -127,7 +127,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'frontend/coffee/modules/',
         src: ['*.coffee'],
-        dest: 'frontend/js/precompiled/modules_coffee/',
+        dest: 'frontend/js/precompiled/modules/',
         ext: '.js'
       } // compile_modules
     }, // coffee
