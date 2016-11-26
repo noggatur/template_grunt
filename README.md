@@ -24,25 +24,26 @@
   git clone https://github.com/noggatur/template_grunt.git
 ```
 
-И перейдите в папку с проектом.
+и перейдите в папку с проектом.
 ```sh
   cd template_grunt
 ```
 
 Проект работает на основе [Grunt.js](http://gruntjs.com/), который в свою очередь сделан на базе Node.js.
-Поэтому для начала следует [установить Node.js](https://nodejs.org/en/), если этого не сделано ранее.
+Поэтому перед использованием следует [установить Node.js](https://nodejs.org/en/), если этого не сделано ранее.
 Кроме того, необходимо глобально установить и сам Grunt:
 ```sh
   npm install -g grunt-cli
 ```
 
-Кроме того, ну в проекте используется CSS фреймворк [Compass](http://compass-style.org/) для компиляции Sass файлов. Так что его тоже нужно установить (кстати, для Compass необходим также [Ruby](https://www.ruby-lang.org/ru/)):
+Также в проекте используется CSS фреймворк [Compass](http://compass-style.org/) для компиляции Sass файлов.
+Так что его тоже нужно установить (кстати, для Compass необходим также [Ruby](https://www.ruby-lang.org/ru/)):
 ```sh
   gem update --system
   gem install compass
 ```
 
-Также к компасу подключаются такие расширения (gems) как Bootstrap и Bourbon (их подключение уже задано в Gemfile), поэтому следует установить и запустить ещё и `bundler`:
+К компасу подключаются такие расширения (gems) как Bootstrap и Bourbon (их подключение уже задано в Gemfile), поэтому следует установить и запустить ещё и `bundler`:
 ```sh
   gem install bundler
   bundle install
